@@ -8,11 +8,16 @@
 |0x8|Dword|||
 |0xC|Dword*|Pointer Usually To 0x90||
 |0x10|Dword|||
-|0x90|Dword*|Pointer To Section A Header|
+|0x14|Dword*|Pointer To Section B?||
+|0x1C|Dword*|Pointer To Bones?||
+|0x20|Dword*|Pointer To Section C?||
+|0x24|Dword*|???||
+|0x4C|Dword*|Pointer To Objects Header||
+|0x90|Dword*|Pointer To Textures Header||
 
 ## Textures 
 
-### Texture Header
+### Textures Header
 32 Bytes Long
 |Address|Data Type|Definition|Extra Information|
 |---|---|---|---|
@@ -32,10 +37,31 @@ TIM2 Headerless PQRS Format
 |0x8|Dword|||
 |0xC|Dword|||
 
-## Mesh
+## Objects
+
+### Objects Header
+|Offset|Data Type|Definition|Extra Information|
+|---|---|---|---|
+|0x0|Dword*|Pointer To Object Name?||
+|0x8|Dword*|Pointer To Start Of Subsection A||
+|0x10|Dword*|???||
+
+#### Subsection A
+|Offset|Data Type|Definition|Extra Information|
+|---|---|---|---|
+|0xC|Dword*|Pointer To First Strip List||
+
+### Strip List Header
+|Offset|Data Type|Definition|Extra Information|
+|---|---|---|---|
+|0x0|Dword*|Pointer To Next Strip List Header|0x0 If Last List Header|
+|0xC|Dword*|Pointer To Strip List||
+
+### Strip List
+
 
 ### Chunk Header
-|Address|Data Type|Definition|Extra Information|
+|Offset|Data Type|Definition|Extra Information|
 |---|---|---|---|
 |0x0|Dword|Chunk ID|Always xD2 x80 x01 x6C|
 |0x4|Byte|???||
