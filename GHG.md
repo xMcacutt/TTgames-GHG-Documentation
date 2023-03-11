@@ -86,6 +86,7 @@ Each entry in the list is 0x40 bytes long and as follows:
 #### Strip
 ##### Strip Chunk
 |Offset|Data Type|Definition|Extra Information|
+|---|---|---|---|
 |0x00|Dword|Chunk ID|Always xD2 x80 x01 x6C|
 |0x04|Byte|???||
 |0x05|Byte|???|Always x80|
