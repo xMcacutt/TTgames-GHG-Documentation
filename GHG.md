@@ -76,21 +76,24 @@ Each entry in the list is 0x40 bytes long and as follows:
 |0x33|Byte|Always 0x50||
 |0x34|Word|Offset To Strip Data From Start Of Strip List Excluding Strip List Header||
 
-### Strip Data
+### Strip Data Header
 |Offset|Data Type|Definition|Extra Information|
 |---|---|---|---|
-|0x0|Word|???||
+|0x0|Word|Strip Data Length|Big Endian|
 |0x2|Word|???|Always x06 x60|
 |0x8|Byte[4]|???|Bools|
-|0x10|Dword|Chunk ID|Always xD2 x80 x01 x6C|
-|0x14|Byte|???||
-|0x15|Byte|???|Always x80|
-|0x18|Qword|???|Always x00 x40 x02 x30 x12 x05 x00 x00|
-|0x24|Dword|???|Always x02 x80 x01 x6D|
-|0x28|Word|???|Always 4 times 0x4|
-|0x2A|Word|???|Always x01|
-|0x30|Word|???|Always x04 x02 or x03 x01|
-|0x32|Word|???|Always x00 x01|
-|0x34|Word|???|Always x03 x80|
-|0x36|Byte|Chunk Float Count||
-|0x37|Byte|???|Always x6C|
+
+#### Strip Data Chunk
+|Offset|Data Type|Definition|Extra Information|
+|0x00|Dword|Chunk ID|Always xD2 x80 x01 x6C|
+|0x04|Byte|???||
+|0x05|Byte|???|Always x80|
+|0x08|Qword|???|Always x00 x40 x02 x30 x12 x05 x00 x00|
+|0x14|Dword|???|Always x02 x80 x01 x6D|
+|0x18|Word|???|Always 4 times 0x4|
+|0x1A|Word|???|Always x01|
+|0x20|Word|???|Always x04 x02 or x03 x01|
+|0x22|Word|???|Always x00 x01|
+|0x24|Word|???|Always x03 x80|
+|0x26|Byte|Chunk Float Count||
+|0x27|Byte|???|Always x6C|
