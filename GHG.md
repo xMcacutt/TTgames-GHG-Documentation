@@ -76,14 +76,15 @@ Each entry in the list is 0x40 bytes long and as follows:
 |0x33|Byte|Always 0x50||
 |0x34|Word|Offset To Strip Data From Start Of Strip List Excluding Strip List Header||
 
-### Strip Data Header
+### Strip Header
 |Offset|Data Type|Definition|Extra Information|
 |---|---|---|---|
-|0x0|Word|Strip Data Length|Big Endian|
+|0x0|Byte|Strip Data Length|When Multiplied By 0x10|
 |0x2|Word|???|Always x06 x60|
 |0x8|Byte[4]|???|Bools|
 
-#### Strip Data Chunk
+#### Strip
+##### Strip Chunk
 |Offset|Data Type|Definition|Extra Information|
 |0x00|Dword|Chunk ID|Always xD2 x80 x01 x6C|
 |0x04|Byte|???||
