@@ -41,29 +41,23 @@ TIM2 Headerless PQRS Format
 
 ## Objects
 
-### Objects Header
+### Layer Data
 |Offset|Data Type|Definition|Extra Information|
 |---|---|---|---|
-|0x0|Dword*|Pointer To Object Name?||
-|0x8|Dword*|Pointer To Start Of Subsection A||
-|0x10|Dword*|???||
+|0x0|Dword*|Pointer To Name||
 
 #### Subsection A
 |Offset|Data Type|Definition|Extra Information|
 |---|---|---|---|
 |0xC|Dword*|Pointer To First Strip List||
 
-### Strip List Header
+### Geom
 |Offset|Data Type|Definition|Extra Information|
 |---|---|---|---|
-|0x0|Dword*|Pointer To Next Strip List Header|0x0 If Last List Header|
+|0x0|Dword*|Pointer To Next Geom|0x0 If Last Geom|
+|0x4|Dword|Geom ID||
 |0xC|Dword*|Pointer To Strip List||
 
-### Strip List
-The strip list contains all of the strip info in a list.
-Each entry in the list is 0x40 bytes long and as follows:
-#### Strip Info
-|Offset|Data Type|Definition|Extra Information|
 |---|---|---|---|
 |0x0|Dword|Strip ID?|Always x00 x00 x07 x10|
 |0x8|Dword|???|Always x08 x01 x00 x01|
