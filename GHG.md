@@ -14,7 +14,7 @@
 |0x24|Dword*|???||
 |0x30|Dword*|Pointer To String Table||
 |0x34|Dword|String Table Length||
-|0x4C|Dword*|Pointer To Objects Header||
+|0x4C|Dword*|Pointer To Layer Data||
 |0x90|Dword*|Pointer To Textures Header||
 
 ## Textures 
