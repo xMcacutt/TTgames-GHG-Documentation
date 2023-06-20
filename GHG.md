@@ -9,9 +9,10 @@
 |0xC|Dword*|Pointer Usually To 0x90||
 |0x10|Dword|||
 |0x14|Dword*|Pointer To Section B?||
-|0x1C|Dword*|Pointer To Bones?||
+|0x1C|Dword*|Pointer To String Table||
 |0x20|Dword*|Pointer To Section C?||
 |0x24|Dword*|???||
+|0x34|Dword|String Table Length||
 |0x4C|Dword*|Pointer To Objects Header||
 |0x90|Dword*|Pointer To Textures Header||
 
