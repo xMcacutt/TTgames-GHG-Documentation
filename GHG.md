@@ -58,6 +58,7 @@ TIM2 Headerless PQRS Format
 |0x4|Dword|Geom ID||
 |0xC|Dword*|Pointer To Strip List||
 
+|Offset|Data Type|Definition|Extra Information|
 |---|---|---|---|
 |0x0|Dword|Strip ID?|Always x00 x00 x07 x10|
 |0x8|Dword|???|Always x08 x01 x00 x01|
