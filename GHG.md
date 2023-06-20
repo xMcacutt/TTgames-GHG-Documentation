@@ -46,10 +46,10 @@ TIM2 Headerless PQRS Format
 |---|---|---|---|
 |0x0|Dword*|Pointer To Name||
 
-#### Subsection A
+#### Obj
 |Offset|Data Type|Definition|Extra Information|
 |---|---|---|---|
-|0xC|Dword*|Pointer To First Strip List||
+|0xC|Dword*|Pointer To First Geom||
 
 ### Geom
 |Offset|Data Type|Definition|Extra Information|
