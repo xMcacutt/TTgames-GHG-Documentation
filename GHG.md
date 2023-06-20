@@ -76,7 +76,7 @@ TIM2 Headerless PQRS Format
 ### Strip Header
 |Offset|Data Type|Definition|Extra Information|
 |---|---|---|---|
-|0x0|Byte|Strip Data Length|When Multiplied By 0x10|
+|0x0|Word|Geom Strip Data Line Count||
 |0x2|Word|???|Always x06 x60|
 |0x8|Byte[4]|???|Bools|
 
